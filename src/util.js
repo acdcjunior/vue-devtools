@@ -258,7 +258,7 @@ function basename (filename, ext) {
   )
 }
 
-export function getComponentName (options) {
+export function getComponentName (options = {}) {
   const name = options.name || options._componentTag
   if (name) {
     return name
