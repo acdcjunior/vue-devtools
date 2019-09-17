@@ -216,6 +216,9 @@ function basename (filename, ext) {
 }
 
 export function getComponentName (options) {
+  if (options) {
+    return
+  }
   const name = options.name || options._componentTag
   if (name) {
     return name
