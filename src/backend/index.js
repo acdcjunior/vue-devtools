@@ -516,7 +516,7 @@ function getInstanceDetails (id) {
     const data = {
       id,
       name: getComponentName(vnode.fnOptions),
-      file: vnode.fnOptions.__file || null,
+      file: (vnode.fnOptions && vnode.fnOptions.__file) || null,
       state: processProps({ $options: vnode.fnOptions, ...(vnode.devtoolsMeta && vnode.devtoolsMeta.renderContext.props) }),
       functional: true
     }
